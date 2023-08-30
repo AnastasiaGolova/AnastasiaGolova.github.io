@@ -1,0 +1,257 @@
+/* Universal Styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Patrick Hand', sans-serif;
+}
+
+body {
+    margin: 0;
+    cursor: url("./media/cursor-24.png"), auto;
+}
+
+a {
+    text-decoration: none;
+    cursor: url("./media/icons8-cursor-30.png"), auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color:#06384B;
+}
+
+.button {
+    border-radius: 2.5rem;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-family: 'Patrick Hand', sans-serif;
+}
+/* Header: nav and banner */
+header {
+    background-image: radial-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.7)), url("./media/photo_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 810px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 0.5rem;
+}
+
+.Anastasia {
+    font-family: 'Princess Sofia', sans-serif;
+    color: #FFFEF5;
+    font-size: 2.5rem;
+    margin-left: 2rem; 
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    display: inline-block;
+    padding-right: 3.125rem;
+}
+
+.menu a, .button-primary a, .button-secondary a, .banner h1 {
+    font-size: 1.75rem;
+    color:#FFFEF5;
+}
+
+.button-primary a {
+    color: #06384B;
+}
+
+.button-primary {
+    margin-right: 2rem;
+}
+
+.button-secondary {
+    background-color: #06384B;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 600px;
+    max-width: 46%;
+    margin-left: 10rem;
+}
+
+.banner h1 {
+    font-size: 3.625rem;
+    font-weight: 400;
+}
+
+.about-me {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+    "header header"
+    "photo text";
+    background-color: #FFFEF5;
+}
+
+.about-me h2 {
+    grid-area: header;
+}
+
+.about-me img {
+    grid-area: photo;
+    max-width: 60%;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+.about-me p {
+    grid-area: text;
+    color:#06384B;
+    font-size: 1.5rem;
+    margin-right: 6rem;
+}
+
+/* Section my skills */
+.my-skills {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    background-color: #FFFEF5;
+    padding: 0 5rem 3rem 5rem;
+}
+
+.my-skills h2 {
+    grid-area: 1/1/2/12;
+}
+
+.fa-html5 {
+    color: #E44D26;
+}
+.fa-css3-alt {
+    color: #0170BA;
+}
+.fa-js {
+    color: #F7DF1E;
+}
+.fa-npm {
+    color: #CB3837;
+}
+.fa-react {
+    color: #61DAFB;
+}
+.fa-git-alt {
+    color: #F05033;
+}
+
+/* Section my projects */
+.my-projects {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #06384B;
+    justify-content: space-evenly;
+}
+
+.my-projects h2 {
+    width: 100%;
+    color:#FFFEF5;
+}
+
+.project {
+    display: grid;
+    place-items: center;
+    grid: 50px auto 50px / 1.5fr 1.5fr 3fr 1fr 1fr;
+    background-color: #FFFEF5;
+    color:#06384B;
+    height: 300px;
+    width: 280px;
+    border-radius: 30px;
+    padding: 0 0.75rem;
+    margin: 3rem 0 6rem 0;
+}
+
+.fa-window-maximize {
+    grid-area: 1/4/2/5;
+}
+
+.fa-window-maximize, .project .fa-github {
+    font-size: 1.25rem;
+}
+
+.project .fa-github {
+    grid-area: 1/5/2/6;
+}
+
+.project h3 {
+    grid-area: 2/1/3/6;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.html {
+    grid-area: 3/1/4/2;
+}
+
+.css {
+    grid-area: 3/2/4/3;
+}
+
+.html, .css {
+    font-size: 1.25rem;
+}
+
+.my-contacts {
+    background-color: #FFFEF5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+}
+
+.my-contacts h2 {
+    width: 100%;
+}
+
+.my-contacts i, .my-contacts img {
+    padding: 2rem;
+}
+
+a.contact-link {
+    color: black;
+}
+
+a.contact-link .fa-linkedin {
+    color: #0E76A8;
+}
+
+a.contact-link .fa-envelope {
+    color:#06384B;
+}
+
+footer {
+    background-color: #06384B;
+    color:#FFFEF5;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
