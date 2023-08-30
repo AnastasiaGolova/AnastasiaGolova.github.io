@@ -28,8 +28,15 @@ h2 {
 .button {
     border-radius: 2.5rem;
     border: none;
-    padding: 0.5rem 1.2rem;
     font-family: 'Patrick Hand', sans-serif;
+    box-shadow: 5px 5px 15px rgba(53,17,17,0.5);
+}
+.button a {
+    display: block;
+    padding: 0.5rem 1.2rem;
+}
+.button:active {
+    transform: translateY(2px);
 }
 /* Header: nav and banner */
 header {
@@ -62,6 +69,7 @@ nav {
 .menu li {
     display: inline-block;
     padding-right: 3.125rem;
+    
 }
 
 .menu a, .button-primary a, .button-secondary a, .banner h1 {
@@ -69,16 +77,35 @@ nav {
     color:#FFFEF5;
 }
 
+.menu a:hover {
+    color:#E2BD5F;  
+}
+.menu a:active {
+    font-size: 1.5rem;
+}
+.button-primary {
+    margin-right: 2rem;
+    background-color:#FFFEF5;
+    transition: background-color 0.25s ease-in-out 0s;
+}
 .button-primary a {
     color: #06384B;
 }
-
-.button-primary {
-    margin-right: 2rem;
+.button-primary:hover {
+    background-color: #06384B;
 }
-
+.button-primary a:hover {
+    color:#FFFEF5;
+}
 .button-secondary {
     background-color: #06384B;
+    transition: background-color 0.25s ease-in-out 0s;
+}
+.button-secondary:hover {
+    background-color: #FFFEF5;
+}
+.button-secondary a:hover {
+    color:#06384B;
 }
 
 .banner {
@@ -183,8 +210,17 @@ nav {
     padding: 0 0.75rem;
     margin: 3rem 0 6rem 0;
 }
+.project a {
+    text-decoration: none;
+    display: block;
+    color:#06384B;
+    transition: color 0.25s ease-in-out 0s;
+}
+.project a:hover {
+    color: #E2BD5F;
+}
 
-.fa-window-maximize {
+.browser-link {
     grid-area: 1/4/2/5;
 }
 
@@ -192,7 +228,7 @@ nav {
     font-size: 1.25rem;
 }
 
-.project .fa-github {
+.github-link {
     grid-area: 1/5/2/6;
 }
 
