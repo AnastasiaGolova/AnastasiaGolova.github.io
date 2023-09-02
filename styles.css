@@ -245,8 +245,10 @@ nav {
 .css {
     grid-area: 3/2/4/3;
 }
-
-.html, .css {
+.javascript{
+    grid-area: 3/3/4/4;
+}
+.html, .css, .javascript {
     font-size: 1.25rem;
 }
 
