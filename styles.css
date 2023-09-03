@@ -126,11 +126,13 @@ nav {
 
 .about-me {
     display: grid;
-    grid-template-columns: 4fr 5fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 3.5fr 5.5fr;
+    grid-template-rows: 1fr 0.5fr 320px 280px;
     grid-template-areas: 
     "header header"
-    "photo text";
+    "photo text"
+    "photo facts"
+    "photo additionalFacts";
     background-color: #FFFEF5;
 }
 
@@ -140,17 +142,80 @@ nav {
 
 .about-me img {
     grid-area: photo;
-    max-width: 60%;
+    max-width: 65%;
     border-radius: 50%;
     justify-self: center;
 }
 
-.about-me p {
+.about-me h3 {
     grid-area: text;
     color:#06384B;
-    font-size: 1.5rem;
-    margin-right: 6rem;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0;
 }
+#facts {
+    grid-area: facts;
+    margin-right: 2rem;  
+}
+#facts button {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    background-color: #f3d385;
+    border: none;
+    color:#06384B;
+    font-family: 'Patrick Hand', sans-serif;
+    box-shadow: 5px 5px 15px rgba(42, 17, 53, 0.35);
+    transition: transform 0.2s ease-out, background-color 0.2s ease-in;
+}
+#facts button:hover {
+    cursor: url("./media/cursor-24.png"), auto;
+    background-color:#f0dba5;
+}
+#facts button:active, #additionalFacts button:active {
+    transform: translateY(2px);
+}
+#additionalFacts {
+    grid-area: additionalFacts;
+}
+#additionalFacts p {
+    font-size: 1.5rem;
+    color:#06384B;
+    margin-right: 2rem;
+}
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+#additionalFacts button {
+    font-size: 1.5rem;
+    border-radius: 30px;
+    background-color: #bb2a6e;
+    border: none;
+    color: #FFFEF5;
+    font-family: 'Patrick Hand', sans-serif;
+    box-shadow: 5px 5px 15px rgba(42, 17, 53, 0.35);
+    transition: background-color 0.2s ease-in;
+    animation: bounceIn 0.4s ease-in-out 2s;
+}
+#additionalFacts button:hover {
+    background-color: #c74381;
+}
+#behance {
+    color: rgb(40, 36, 148);
+}
+
 
 /* Section my skills */
 .my-skills {
