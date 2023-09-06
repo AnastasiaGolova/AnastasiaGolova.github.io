@@ -1,11 +1,27 @@
+:root {
+    /* font scale */
+    --base-size: 1.5rem;
+    --h1: calc(var(--base-size)*2.42); /*3.63rem*/
+    --h2: calc(var(--base-size)*2); /*3rem*/
+    --h3: calc(var(--base-size)*1.34); /*2rem*/
+    --medium: calc(var(--base-size)*1.17); /*1.75rem*/
+    --small: calc(var(--base-size)/1.2); /*1.25rem*/
+    --xl: calc(var(--base-size)*2.67); /*4rem*/
+    --xxl: calc(var(--base-size)*3.34); /*5rem*/
+    --extra: calc(var(--base-size)*6.67); /*10rem*/
+
+    /* fonts */
+    --decorative: 'Princess Sofia', sans-serif;
+    --sans: 'Patrick Hand', sans-serif;
+}
+
 /* Universal Styles */
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: var(--sans);
 }
 
 body {
@@ -20,7 +36,7 @@ a {
 
 h2 {
     text-align: center;
-    font-size: 3rem;
+    font-size: var(--h2);
     font-weight: 400;
     color:#06384B;
 }
@@ -28,7 +44,7 @@ h2 {
 .button {
     border-radius: 2.5rem;
     border: none;
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: var(--sans);
     box-shadow: 5px 5px 15px rgba(53,17,17,0.5);
 }
 .button a {
@@ -51,11 +67,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .Anastasia {
-    font-family: 'Princess Sofia', sans-serif;
+    font-family: var(--decorative);
     color: #FFFEF5;
     font-size: 2.5rem;
     margin-left: 2rem; 
@@ -81,10 +97,11 @@ nav {
     color:#E2BD5F;  
 }
 .menu a:active {
-    font-size: 1.5rem;
+    font-size: var(--base-size);
 }
 .button-primary {
     margin-right: 2rem;
+    margin-top: 1rem;
     background-color:#FFFEF5;
     transition: background-color 0.25s ease-in-out 0s;
 }
@@ -116,24 +133,28 @@ nav {
     align-items: flex-start;
     height: 600px;
     max-width: 46%;
-    margin-left: 10rem;
+    margin-left: var(--extra);
 }
 
 .banner h1 {
-    font-size: 3.625rem;
+    font-size: var(--h1);
     font-weight: 400;
 }
 
 .about-me {
     display: grid;
     grid-template-columns: 3.5fr 5.5fr;
-    grid-template-rows: 1fr 0.5fr 320px 280px;
+    grid-template-rows: 1fr auto;
     grid-template-areas: 
     "header header"
-    "photo text"
-    "photo facts"
-    "photo additionalFacts";
+    "photo div";
     background-color: #FFFEF5;
+}
+.about-me .flex-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: div;
+    margin-bottom: 1rem;
 }
 
 .about-me h2 {
@@ -150,9 +171,10 @@ nav {
 .about-me h3 {
     grid-area: text;
     color:#06384B;
-    font-size: 2rem;
+    font-size: var(--h3);
     font-weight: 400;
     margin-top: 0;
+    margin-bottom: var(--h1);
 }
 #facts {
     grid-area: facts;
@@ -160,7 +182,7 @@ nav {
 }
 #facts button {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: var(--base-size);
     margin-right: 1rem;
     margin-bottom: 1rem;
     padding: 1rem 1.5rem;
@@ -183,7 +205,7 @@ nav {
     grid-area: additionalFacts;
 }
 #additionalFacts p {
-    font-size: 1.5rem;
+    font-size: var(--base-size);
     color:#06384B;
     margin-right: 2rem;
 }
@@ -199,18 +221,18 @@ nav {
     }
   }
 #additionalFacts button {
-    font-size: 1.5rem;
+    font-size: var(--base-size);
     border-radius: 30px;
-    background-color: #bb2a6e;
+    background-color: #BF3D57;
     border: none;
     color: #FFFEF5;
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: var(--sans);
     box-shadow: 5px 5px 15px rgba(42, 17, 53, 0.35);
     transition: background-color 0.2s ease-in;
     animation: bounceIn 0.4s ease-in-out 2s;
 }
 #additionalFacts button:hover {
-    background-color: #c74381;
+    background-color: #c95d72;
 }
 #behance {
     color: rgb(40, 36, 148);
@@ -224,11 +246,18 @@ nav {
     grid-template-rows: 1fr 1fr;
     place-items: center;
     background-color: #FFFEF5;
-    padding: 0 5rem 3rem 5rem;
+    padding: 0 var(--xxl) var(--h2) var(--xxl);
 }
 
 .my-skills h2 {
     grid-area: 1/1/2/12;
+}
+
+.my-skills .fa-brands {
+    font-size: var(--xxl);
+}
+.my-skills .fa-solid {
+    font-size: var(--xl);
 }
 
 .fa-html5 {
@@ -266,57 +295,61 @@ nav {
 .project {
     display: grid;
     place-items: center;
-    grid: 50px auto 50px / 1.5fr 1.5fr 3fr 1fr 1fr;
+    grid: auto 50px / repeat(4, 1.5fr);
     background-color: #FFFEF5;
     color:#06384B;
     height: 300px;
     width: 280px;
     border-radius: 30px;
-    padding: 0 0.75rem;
     margin: 3rem 0 6rem 0;
-}
-.project a {
-    color:#06384B;
-    transition: color 0.25s ease-in-out 0s;
-}
-.project a:hover {
-    color: #E2BD5F;
 }
 
 .browser-link {
-    grid-area: 1/4/2/5;
+    grid-area: 1/2/2/3;
+    justify-self: start;
 }
-
 .fa-window-maximize, .project .fa-github {
-    font-size: 1.25rem;
+    font-size: var(--h2);
+    cursor: url("./media/cursor-24.png"), auto;
 }
-
+.fa-window-maximize {
+    color:#212381;
+}
+.project .fa-github {
+    color:#212381;
+}
 .github-link {
-    grid-area: 1/5/2/6;
+    grid-area: 1/3/2/4;
+    justify-self: end;
 }
-
 .project h3 {
-    grid-area: 2/1/3/6;
-    font-size: 2rem;
+    grid-area: 1/1/2/5;
+    font-size: var(--h3);
     font-weight: 400;
     text-align: center;
-    margin: 1.5rem;
+    margin-top: 3rem;
+    background-color:#a94a5d;
+    color:#FFFEF5;
+    padding: 0.5rem 2rem;
+    height: 9rem;
 }
-
+/* #BF3D57 */
 .html {
-    grid-area: 3/1/4/2;
+    grid-area: 2/1/3/2;
+    justify-self: end;
 }
 
 .css {
-    grid-area: 3/2/4/3;
+    grid-area: 2/2/3/3;
 }
 .javascript{
-    grid-area: 3/3/4/4;
+    grid-area: 2/3/3/4;
 }
 .html, .css, .javascript {
     font-size: 1.25rem;
 }
 
+/* My contacts section */
 .my-contacts {
     background-color: #FFFEF5;
     display: flex;
@@ -329,8 +362,9 @@ nav {
     width: 100%;
 }
 
-.my-contacts i, .my-contacts img {
-    padding: 2rem;
+.my-contacts i {
+    padding: var(--h3);
+    font-size: var(--xl);
 }
 
 a.contact-link {
@@ -349,10 +383,122 @@ footer {
     background-color: #06384B;
     color:#FFFEF5;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: var(--base-size);
     padding: 2rem;
 }
 
 footer p {
     margin: 0;
+}
+
+/* Media queries */
+@media only screen and (max-width: 1200px) and (min-width: 800px){
+    :root {
+        --base-size: 1.3rem;
+    }
+    .project h3 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 450px) {
+    :root {
+        --base-size: 1rem;
+    }
+    header {
+        height: 700px;
+    }
+    .Anastasia {
+        font-size: 2rem;
+    }
+    #facts button, #additionalFacts button {
+        font-size: 1.25rem;
+    }
+    .menu a, .button-primary a, .button-secondary a {
+        font-size: 1.25rem;
+    }
+    .project h3 {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 682px){
+    .logo-name span {
+        display: none;
+    }
+    .my-skills .fa-brands {
+        font-size: var(--h1);
+    }
+    .my-skills .fa-solid {
+        font-size: var(--h2);
+    }
+    .banner {
+        margin-left: 4rem;
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 544px){
+    .button-primary {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    :root {
+        --base-size: 0.8rem;
+    }
+    nav {
+        display: none;
+    }
+    header {
+        height: 400px;
+    }
+    .banner {
+        height: 400px;
+        margin-left: 2rem;
+        max-width: 60%;
+    }
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+    .about-me img {
+        display: none;
+    }
+    #facts, #additionalFacts {
+        margin-left: 2rem;
+    }
+    .about-me h3 {
+        text-align: center;
+    }
+    #facts button {
+        padding: 0.8rem;
+    }
+    .menu a, .button-primary a, .button-secondary a {
+        font-size: 1.25rem;
+    }
+    .my-skills .fa-brands {
+        font-size: var(--h2);
+    }
+    .my-skills .fa-solid {
+        font-size: var(--h3);
+    }
+    .my-skills {
+        padding: 0 var(--h3) var(--h3) var(--h3);
+    }
+    .project {
+        margin: 1.5rem 0 3rem 0;
+    }
+    .project h3 {
+        font-size: 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .banner h1 {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .banner .button a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
 }
