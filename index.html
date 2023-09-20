@@ -1,68 +1,240 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Anastasia Golova - a junior frontend developer</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Princess+Sofia&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./styles.css">
-        <script src="https://kit.fontawesome.com/ab51f9eaa6.js" crossorigin="anonymous"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="logo-name">
-                    <span class="Anastasia">Anastasia</span>
-                </div>
-                <ul class="menu">
-                    <!-- <li><a href="#home">HOME</a></li> -->
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                </ul>
-                <div>
-                    <button class="button-primary button"><a href="#contact">CONTACT ME</a></button>
-                </div>
-            </nav>
-            <section class="banner" id="home">
-                <h1>Hi! My name is Anastasia and <br />I’m a Junior Front-end Developer</h1>
-                <button class="button-secondary button"><a href="#projects">VIEW PROJECTS</a></button>
-            </section>
-        </header>
-        <main>
-            <section class="about-me" id="about">
-                <h2>ABOUT ME</h2>
-                <img src="./media/IMG_2.jpg" alt="my photo in New York">
-                <div class="flex-container">
-                    <h3>Guess what fact about me is <strong>false</strong>:</h3>
-                    <div id="facts">
-    
-                    </div>
-                    <div id="additionalFacts">
-    
-                    </div>
-                </div>
-                
-            </section>
-            <section class="my-skills" id="skills">
-                <h2>MY SKILLS</h2>
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-css3-alt"></i>
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-npm"></i>
-                <i class="fa-brands fa-react"></i>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-git-alt"></i>
-                <i class="fa-brands fa-figma"></i>
-                <i class="fa-brands fa-python"></i>
-                <i class="fa-solid fa-terminal fa-4x"></i>
-                <i class="fa-solid fa-r fa-4x"></i>
-            </section>
-            <section class="my-projects" id="projects">
-                <h2>MY PROJECTS</h2>
-                <section class="project">
-                    <a href="Age-gender-and-nation-prediction-by-name/" target="_blank" class="browser-link"><i class="fa-solid fa-window-maximize"></i></a>
+  <head>
+    <title>Anastasia Golova - a junior frontend developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/ab51f9eaa6.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo-name">
+          <span class="Anastasia">Anastasia</span>
+        </div>
+        <ul class="menu">
+          <!-- <li><a href="#home">HOME</a></li> -->
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+        </ul>
+        <div>
+          <button class="button-primary button">
+            <a href="#contact">CONTACT ME</a>
+          </button>
+        </div>
+      </nav>
+      <section class="banner" id="home">
+        <h1>
+          Hi! My name is Anastasia and <br />I’m a Junior Front-end Developer
+        </h1>
+        <button class="button-secondary button">
+          <a href="#projects">VIEW PROJECTS</a>
+        </button>
+      </section>
+    </header>
+    <main>
+      <section class="about-me" id="about">
+        <h2>ABOUT ME</h2>
+        <img src="./media/IMG_2.jpg" alt="my photo in New York" />
+        <div class="flex-container">
+          <h3>Guess what fact about me is <strong>false</strong>:</h3>
+          <div id="facts"></div>
+          <div id="additionalFacts"></div>
+        </div>
+      </section>
+      <section class="my-skills" id="skills">
+        <h2>MY SKILLS</h2>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-npm"></i>
+        <i class="fa-brands fa-react"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-git-alt"></i>
+        <i class="fa-brands fa-figma"></i>
+        <i class="fa-brands fa-python"></i>
+        <i class="fa-solid fa-terminal fa-4x"></i>
+        <i class="fa-solid fa-r fa-4x"></i>
+      </section>
+      <section class="my-projects" id="projects">
+        <h2>MY PROJECTS</h2>
+        <section class="project">
+            <span>latest - the newest</span>
+          <table>
+            <thead>
+              <tr>
+                <th class="top-border left-border"></th>
+                <th class="top-border"></th>
+                <th class="top-border width-column">live</th>
+                <th class="top-border width-column">repo</th>
+                <th class="top-border width-column display-none">HTML</th>
+                <th class="top-border width-column display-none">CSS</th>
+                <th class="top-border width-column display-none">JS</th>
+                <th class="top-border width-column display-none">React</th>
+                <th class="top-border right-border">5)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="left-border">1)</th>
+                <td class="text-table">School Home Page with Flexbox</td>
+                <td>
+                  <a href="https://anastasiagolova.github.io/A-Language-School-Home-Page-with-Flexbox/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+                <td>
+                  <a href="https://github.com/AnastasiaGolova/A-Language-School-Home-Page-with-Flexbox" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                    <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none"></td>
+                <td class="display-none"></td>
+                <td class="right-border"></td>
+              </tr>
+              <tr>
+                <th class="left-border">2)</th>
+                <td class="text-table">Responsive Page for a Knitting Club</td>
+                <td>
+                  <a href="https://anastasiagolova.github.io/Responsive-Page-for-a-Knitting-Club/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+                <td>
+                  <a href="https://github.com/AnastasiaGolova/Responsive-Page-for-a-Knitting-Club" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none"></td>
+                <td class="display-none"></td>
+                <td class="right-border"></td>
+              </tr>
+              <tr>
+                <th class="left-border">3)</th>
+                <td class="text-table">My portfolio website (this one)</td>
+                <td>
+                  <a href="https://anastasiagolova.github.io/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+                <td>
+                  <a href="https://github.com/AnastasiaGolova/AnastasiaGolova.github.io" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none"></td>
+                <td class="right-border"></td>
+              </tr>
+              <tr>
+                <th class="left-border">4)</th>
+                <td class="text-table">Age, gender and nation prediction by name</td>
+                <td>
+                  <a href="https://anastasiagolova.github.io/Age-gender-and-nation-prediction-by-name/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+                <td>
+                  <a href="https://github.com/AnastasiaGolova/Age-gender-and-nation-prediction-by-name" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none"></td>
+                <td class="right-border"></td>
+              </tr>
+              <tr>
+                <th class="left-border">5)</th>
+                <td class="text-table">Digital business card</td>
+                <td>
+                  <a href="https://anastasiagolova.github.io/digital-business-card-project-react/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+                <td>
+                  <a href="https://github.com/AnastasiaGolova/digital-business-card-project-react" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="right-border"></td>
+              </tr>
+              <tr>
+                <th class="left-border">6)</th>
+                <td class="text-table">My travel journal</td>
+                <td>
+                  <a href="https://anastasiagolova.github.io/travel-journal-project-react/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </td>
+                <td>
+                  <a href="https://github.com/AnastasiaGolova/travel-journal-project-react" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="display-none">
+                  <i class="fa-solid fa-circle-check"></i>
+                </td>
+                <td class="right-border"></td>
+              </tr>
+              <tr>
+                <th class="bottom-border left-border">6)</th>
+                <td class="bottom-border"></td>
+                <td class="bottom-border"></td>
+                <td class="bottom-border"></td>
+                <td class="bottom-border display-none"></td>
+                <td class="bottom-border display-none"></td>
+                <td class="bottom-border display-none"></td>
+                <td class="bottom-border display-none"></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- <span>live</span>
+                    <span>repo</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                    <span>React</span>
+                    <span>1)</span><h5>School Home Page with Flexbox</h5>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-solid fa-circle-check"></i> -->
+
+          <!-- <a href="Age-gender-and-nation-prediction-by-name/" target="_blank" class="browser-link"><i class="fa-solid fa-window-maximize"></i></a>
                     <a href="https://github.com/AnastasiaGolova/Age-gender-and-nation-prediction-by-name" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
                     <h3 class="projectName">Age, gender and nation prediction by name</h3>
                     <span class="html">HTML</span>
@@ -81,20 +253,35 @@
                     <a href="https://github.com/AnastasiaGolova/A-Language-School-Home-Page-with-Flexbox" target="_blank" class="github-link"><i class="fa-brands fa-github"></i></a>
                     <h3 class="projectName">A Language School Home Page with Flexbox</h3>
                     <span class="html">HTML</span>
-                    <span class="css">CSS</span>
-                </section>
-            </section>
-            <section class="my-contacts" id="contact">
-                <h2>MY CONTACTS</h2>
-                <a class="contact-link" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=anastasia.golova.sci@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                <a class="contact-link" href="https://www.linkedin.com/in/anastasia-golova-86b8531b2/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a class="contact-link" href="https://github.com/AnastasiaGolova" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </section>
-        </main>
-        <footer>
-            <p>© All Right Reserved 2023</p>
-        </footer>
-        <script src="./script.js"></script>
-        <script src="./hoverProject.js"></script>
-    </body>
+                    <span class="css">CSS</span>-->
+        </section>
+      </section>
+      <section class="my-contacts" id="contact">
+        <h2>MY CONTACTS</h2>
+        <a
+          class="contact-link"
+          href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=anastasia.golova.sci@gmail.com"
+          target="_blank"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <a
+          class="contact-link"
+          href="https://www.linkedin.com/in/anastasia-golova-86b8531b2/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a
+          class="contact-link"
+          href="https://github.com/AnastasiaGolova"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </section>
+    </main>
+    <footer>
+      <p>© All Right Reserved 2023</p>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./hoverProject.js"></script>
+  </body>
 </html>

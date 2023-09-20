@@ -291,7 +291,89 @@ nav {
     width: 100%;
     color:#FFFEF5;
 }
+.project {
+    /* display: grid;
+    grid-template-rows: repeat(7, 4.75rem);
+    grid-template-columns: 5.2rem 25rem repeat(7, 5.2rem); */
+    background-color: #06384B;
+    /* padding: 5.5rem; */
+    color: #FFFEF5;
+}
 
+.project table {
+    width: 62.5rem;
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+}
+
+.project th, .project td {
+    border: 2px solid #FFFEF5;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.project .top-border {
+    border-top: none;
+}
+
+.project .left-border {
+    border-left: none;
+}
+
+.project .bottom-border {
+    border-bottom: none;
+    color:#06384B;
+}
+
+.project .right-border {
+    border-right: none;
+    color:#06384B;
+}
+
+.project .text-table {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.project i {
+    margin: 1rem 0;
+    font-size: 2rem;
+    width: 36px;
+    
+}
+
+.project .fa-github {
+    color: black;
+    background-color: #FFFEF5;
+    border-radius: 50px;
+    padding: 0.15rem;
+    transition: transform 0.2s ease-in;
+}
+
+.project .fa-arrow-up-right-from-square {
+    color: #E2BD5F;
+    transition: transform 0.2s ease-in;
+}
+
+.project .fa-arrow-up-right-from-square:hover, .project .fa-github:hover {
+    transform: translate(2px, -2px);
+}
+
+.project .fa-circle-check {
+    color: #1CC92B;
+}
+
+.project .width-column {
+    width: 4.5rem;
+}
+
+.project > span {
+    font-family: var(--decorative);
+    font-size: 1.25rem;
+    margin-left: 5rem;
+}
+/* Previous design
 .project {
     display: grid;
     place-items: center;
@@ -333,7 +415,7 @@ nav {
     padding: 0.5rem 2rem;
     height: 9rem;
 }
-/* #BF3D57 */
+/* #BF3D57 
 .html {
     grid-area: 2/1/3/2;
     justify-self: end;
@@ -347,7 +429,7 @@ nav {
 }
 .html, .css, .javascript {
     font-size: 1.25rem;
-}
+} */
 
 /* My contacts section */
 .my-contacts {
@@ -399,6 +481,22 @@ footer p {
     .project h3 {
         font-size: 2rem;
     }
+    .project table {
+        width: 44rem;
+    }
+    .project th, .project td {
+        font-size: 1.25rem;
+    }
+    .project .left-border {
+        padding-right: 0.25rem;
+    }
+    .project .width-column {
+        width: 3.5rem;
+    }
+    .project i {
+        font-size: 1.5rem;
+        width: 30px;
+    }
 }
 
 @media only screen and (max-width: 800px) and (min-width: 450px) {
@@ -420,6 +518,14 @@ footer p {
     .project h3 {
         font-size: 2rem;
     }
+    .project table {
+        width: 25rem;
+        margin-top: 1rem;
+    }
+    .project > span {
+        font-size: 1rem;
+        margin-left: 2rem;
+    }
 }
 @media only screen and (max-width: 682px){
     .logo-name span {
@@ -440,6 +546,24 @@ footer p {
     .button-primary {
         display: none;
     }
+}
+@media only screen and (max-width: 800px){
+    .project .left-border {
+        padding-right: 0.25rem;
+    }
+    .project .text-table {
+        padding: 0.4rem;
+    }
+    .project th, .project td {
+        font-size: 0.9rem;
+    }
+    .project .width-column {
+        width: 2.5rem;
+    }
+    .project i {
+        font-size: 1.25rem;
+        width: 24px;
+}
 }
 
 @media only screen and (max-width: 450px){
@@ -485,10 +609,17 @@ footer p {
         padding: 0 var(--h3) var(--h3) var(--h3);
     }
     .project {
-        margin: 1.5rem 0 3rem 0;
+        margin: 0.5rem 0 3rem 0;
     }
     .project h3 {
         font-size: 1.75rem;
+    }
+    .project .display-none {
+        display: none;
+    }
+    .project table {
+        width: 18.5rem;
+        margin-top: 1rem;
     }
 }
 
