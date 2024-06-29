@@ -368,11 +368,18 @@ nav {
     width: 4.5rem;
 }
 
-.project > span {
-    font-family: var(--decorative);
-    font-size: 1.25rem;
-    margin-left: 5rem;
+.text-table {
+    transition: transform 0.2s ease-in;
 }
+
+.text-table a:visited {
+    color: #FFFEF5;
+}
+
+.text-table:hover {
+    transform: translate(2px, -2px);
+}
+
 /* Previous design
 .project {
     display: grid;
